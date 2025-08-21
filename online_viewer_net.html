@@ -1,0 +1,219 @@
+Put your HTML text here<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIMS Grammar High School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#0b6b3a;
+      --accent:#f6c34a;
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.06);
+      --card: rgba(255,255,255,0.9);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#0f172a; background: linear-gradient(180deg,#f7fafc, #e6f7ee);}
+    a{color:var(--green); text-decoration:none}
+    header{background:linear-gradient(90deg, rgba(11,107,58,0.95), rgba(6,78,44,0.95)); color:white; padding:22px 20px; position:sticky; top:0; z-index:40}
+    .container{max-width:1100px; margin:0 auto}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; gap:14px; align-items:center}
+    .logo{width:52px; height:52px; border-radius:10px; background:linear-gradient(135deg,var(--accent),#ffffff33); display:flex; align-items:center; justify-content:center; font-family:Playfair Display; font-weight:700; color:#07341e}
+    nav ul{display:flex; gap:18px; list-style:none; margin:0; padding:0}
+    .cta{background:white; color:var(--green); padding:8px 14px; border-radius:10px; font-weight:600}/* Hero */
+.hero{display:grid; grid-template-columns:1fr 420px; gap:30px; align-items:center; padding:54px 20px}
+.hero-left h1{font-family:Playfair Display; font-size:38px; margin:0 0 10px; color:#05251a}
+.hero-left p{color:var(--muted); margin:0 0 18px}
+.features{display:flex; gap:12px; flex-wrap:wrap}
+.feature{background:var(--card); padding:12px 14px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.06); min-width:150px}
+.hero-right{background:linear-gradient(180deg,#ffffff, #f0fff4); border-radius:14px; padding:18px; box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+.stats{display:flex; gap:14px; justify-content:space-between; margin-top:14px}
+.stat{flex:1; text-align:center}
+
+/* Sections */
+section{padding:34px 20px}
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px}
+.card{background:white; border-radius:12px; padding:16px; box-shadow:0 8px 20px rgba(2,6,23,0.04)}
+
+.footer{background:#02140d; color:#dfeee1; padding:28px 20px}
+.footer a{color:#b8f0c6}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr; padding:28px 16px}
+  nav ul{display:none}
+  .menu-btn{display:inline-block}
+}
+.menu-btn{display:none; background:transparent; border:none; color:white; font-weight:700}
+.mobile-nav{display:none}
+.show{display:block}
+/* small form */
+.form-row{display:flex; gap:10px}
+.form-row input, .form-row textarea{flex:1; padding:10px; border:1px solid #e6edf0; border-radius:8px}
+button[type=submit]{background:var(--green); color:white; padding:10px 14px; border-radius:8px; border:none}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">AG</div>
+        <div>
+          <div style="font-weight:800">AIMS Grammar</div>
+          <div style="font-size:12px; color:#cfead1; margin-top:2px">High School • Excellence in Learning</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a class="cta" href="#admissions">Apply Now</a>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+    <div class="container mobile-nav" id="mobileNav" style="display:none">
+      <ul style="background:rgba(255,255,255,0.04); padding:12px; border-radius:10px; list-style:none; margin-top:12px">
+        <li style="padding:8px 0"><a href="#about">About</a></li>
+        <li style="padding:8px 0"><a href="#academics">Academics</a></li>
+        <li style="padding:8px 0"><a href="#admissions">Admissions</a></li>
+        <li style="padding:8px 0"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Welcome to AIMS Grammar High School</h1>
+        <p>ایک روشن مستقبل کی طرف پہلا قدم — بہترین تعلیم، باہمی اخلاق اور تخلیقی ترقی۔ ہم ہر طالب علم کی کامیابی میں یقین رکھتے ہیں۔</p>
+        <div class="features">
+          <div class="feature"><strong>Experienced Staff</strong><div style="font-size:13px;color:var(--muted)">Dedicated teachers</div></div>
+          <div class="feature"><strong>Modern Labs</strong><div style="font-size:13px;color:var(--muted)">Science & ICT labs</div></div>
+          <div class="feature"><strong>Co-curricular</strong><div style="font-size:13px;color:var(--muted)">Sports & arts programs</div></div>
+        </div>
+        <div style="margin-top:16px">
+          <a class="cta" href="#admissions">Admissions Open</a>
+          <a style="margin-left:12px; color:var(--muted); font-weight:600" href="#contact">Request a Visit</a>
+        </div>
+      </div>
+      <aside class="hero-right">
+        <h3 style="margin:0 0 8px">Quick Facts</h3>
+        <p style="margin:0;color:var(--muted)">Established: 2001 · Grades: 6–12 · Language: English / Urdu</p>
+        <div class="stats">
+          <div class="stat"><div style="font-weight:800; font-size:20px">1,200+</div><div style="font-size:13px;color:var(--muted)">Students</div></div>
+          <div class="stat"><div style="font-weight:800; font-size:20px">85%</div><div style="font-size:13px;color:var(--muted)">Pass Rate</div></div>
+          <div class="stat"><div style="font-weight:800; font-size:20px">40+</div><div style="font-size:13px;color:var(--muted)">Teaching Staff</div></div>
+        </div>
+        <div style="margin-top:14px">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="school image" style="width:100%; border-radius:10px; margin-top:12px"/>
+        </div>
+      </aside>
+    </section><section id="about">
+  <h2>About Us / ہمارے بارے میں</h2>
+  <p style="color:var(--muted)">AIMS Grammar High School ایک ایسا سکول ہے جہاں معیاری تعلیم اور کردار کی تربیت دونوں برابر اہمیت رکھتے ہیں۔ ہماری مشن ہر طالب علم کو خود اعتمادی، علم اور اخلاق کی بنیاد فراہم کرنا ہے۔</p>
+  <div class="cards" style="margin-top:16px">
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p style="color:var(--muted)">To empower students to become critical thinkers and responsible citizens.</p>
+    </div>
+    <div class="card">
+      <h3>Our Values</h3>
+      <p style="color:var(--muted)">Integrity, Curiosity, Respect, Excellence.</p>
+    </div>
+    <div class="card">
+      <h3>Facilities</h3>
+      <p style="color:var(--muted)">Library, Science Labs, Computer Suites, Sports Grounds, Arts Studio.</p>
+    </div>
+  </div>
+</section>
+
+<section id="academics">
+  <h2>Academics / تعلیمی شعبہ</h2>
+  <p style="color:var(--muted)">ہم اعلیٰ معیار کے نصاب، تجرباتی سیکھنے اور فردی رہنمائی پر زور دیتے ہیں۔</p>
+  <div class="cards" style="margin-top:16px">
+    <div class="card">
+      <h3>Science</h3>
+      <p style="color:var(--muted)">Physics, Chemistry, Biology — practical focused.</p>
+    </div>
+    <div class="card">
+      <h3>Mathematics</h3>
+      <p style="color:var(--muted)">Concept-driven teaching and problem solving.</p>
+    </div>
+    <div class="card">
+      <h3>Humanities</h3>
+      <p style="color:var(--muted)">Literature, History, Social Studies.</p>
+    </div>
+  </div>
+</section>
+
+<section id="admissions">
+  <h2>Admissions / داخلہ</h2>
+  <p style="color:var(--muted)">Admissions are open for the new academic year. Complete the short form to apply.</p>
+  <div class="card" style="margin-top:12px">
+    <form onsubmit="event.preventDefault(); alert('Form submitted — replace this with real backend.');">
+      <div class="form-row" style="margin-bottom:10px">
+        <input type="text" placeholder="Student Full Name" required />
+        <input type="text" placeholder="Class applying for (e.g. 9)" required />
+      </div>
+      <div class="form-row" style="margin-bottom:10px">
+        <input type="email" placeholder="Parent / Guardian Email" required />
+        <input type="tel" placeholder="Phone" required />
+      </div>
+      <textarea placeholder="Any message or notes" style="width:100%; min-height:90px; margin-bottom:8px"></textarea>
+      <div style="display:flex; gap:8px; align-items:center">
+        <button type="submit">Submit Application</button>
+        <small style="color:var(--muted)">We'll contact you within 3 working days.</small>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact / رابطہ</h2>
+  <div class="cards" style="align-items:center">
+    <div class="card">
+      <h3>Address</h3>
+      <p style="color:var(--muted)">saeedabad baldia town karachi Province</p>
+      <h3>Phone</h3>
+      <p style="color:var(--muted)">+92 116080127</p>
+      <h3>Email</h3>
+      <p style="color:var(--muted)">@AIMS grammar.edu.pk</p>
+    </div>
+    <div class="card">
+      <h3>Request a Visit</h3>
+      <p style="color:var(--muted)">Drop your preferred date & time and we'll schedule a tour.</p>
+      <form onsubmit="event.preventDefault(); alert('Visit requested — replace with backend.');">
+        <input type="text" placeholder="Your Name" style="margin-bottom:8px; width:100%; padding:10px; border-radius:8px; border:1px solid #e6edf0" required />
+        <input type="date" style="margin-bottom:8px; width:100%; padding:10px; border-radius:8px; border:1px solid #e6edf0" required />
+        <button type="submit">Request Visit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer class="footer">
+    <div class="container" style="display:flex; gap:20px; justify-content:space-between; flex-wrap:wrap; align-items:center">
+      <div>
+        <div style="font-weight:800">AIMS Grammar High School</div>
+        <div style="font-size:13px; color:#9fdab2">Inspiring learners since 2001</div>
+      </div>
+      <div style="font-size:13px; color:#b9e8c9">© <span id="year"></span> AIMS Grammar. All rights reserved.</div>
+    </div>
+  </footer>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleMenu(){
+      var mn = document.getElementById('mobileNav');
+      if(!mn) return;
+      mn.style.display = (mn.style.display === 'block') ? 'none' : 'block';
+    }
+  </script></body>
+</html>
